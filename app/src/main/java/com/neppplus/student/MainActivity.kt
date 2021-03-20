@@ -33,5 +33,13 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, clickedStudent.name, Toast.LENGTH_SHORT).show()
         }
 
+        studentListView.setOnItemLongClickListener { parent, view, position, id ->
+
+            mStudentList.removeAt(position)
+            mAdapter.notifyDataSetChanged()
+
+            return@setOnItemLongClickListener true
+        }
+
     }
 }
