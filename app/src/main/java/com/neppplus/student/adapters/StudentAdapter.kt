@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.neppplus.student.R
 import com.neppplus.student.datas.Student
+import java.util.*
+import kotlin.collections.ArrayList
 
 class StudentAdapter(
     val mContext: Context,
@@ -32,7 +34,12 @@ class StudentAdapter(
         val ageTxt = row.findViewById<TextView>(R.id.ageTxt)
 
         nameTxt.text = studentData.name
-        ageTxt.text = "(${studentData.birthYear}세)"
+//        ageTxt.text = "(${studentData.birthYear}세)"
+
+        val currentYear = Calendar.getInstance().get(Calendar.YEAR)
+        val koreanAge = currentYear - studentData.birthYear + 1
+
+        ageTxt.text = "(${koreanAge}세)"
 
         return row
 
