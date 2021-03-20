@@ -37,10 +37,8 @@ class StudentAdapter(
         nameTxt.text = studentData.name
 //        ageTxt.text = "(${studentData.birthYear}세)"
 
-        val currentYear = Calendar.getInstance().get(Calendar.YEAR)
-        val koreanAge = currentYear - studentData.birthYear + 1
 
-        ageTxt.text = "(${koreanAge}세)"
+        ageTxt.text = "(${studentData.getKoreanAge()}세)"
 
         addressTxt.text = studentData.address
 
