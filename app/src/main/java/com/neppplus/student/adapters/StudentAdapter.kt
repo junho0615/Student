@@ -18,10 +18,14 @@ class StudentAdapter(
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         var tempRow = convertView
-        
+
         if (tempRow == null) {
             tempRow = inflater.inflate(R.layout.student_list_item, null)
         }
+
+        val row = tempRow!!
+
+        return row
 
     }
 }
