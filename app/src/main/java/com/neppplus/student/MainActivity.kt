@@ -16,11 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mStudentList.add(Student("조경진", 1988))
-        mStudentList.add(Student("홍준호", 1995))
-        mStudentList.add(Student("김민철", 1990))
-        mStudentList.add(Student("김종진", 1991))
-        mStudentList.add(Student("장혜진", 1993))
+        mStudentList.add(Student("조경진", 1988, "서울시 은평구"))
+        mStudentList.add(Student("홍준호", 1995, "서울시 중구"))
+        mStudentList.add(Student("김민철", 1990, "서울시 서대문구"))
+        mStudentList.add(Student("김종진", 1991, "서울시 용산구"))
+        mStudentList.add(Student("장혜진", 1993, "서울시 강동구"))
 
         mAdapter = StudentAdapter(this, R.layout.student_list_item, mStudentList)
 
